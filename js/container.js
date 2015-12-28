@@ -4,7 +4,7 @@ App.Container = Backbone.View.extend({
         this.$el.append(view.render().$el);
         this.currentView = view;
     },
-    
+
     destroyView: function (view) {
         if (!view) {
             return;
@@ -12,9 +12,9 @@ App.Container = Backbone.View.extend({
         view.off();
         view.remove();
     },
-    
+
     empty: function () {
-        this.destoyView(this.currentView);
+        this.destroyView(this.currentView);
         this.currentView = null;
     }
 });
